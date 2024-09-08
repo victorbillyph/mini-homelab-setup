@@ -1,19 +1,19 @@
 clear
-echo Instalador Basico KIT
+echo Installer
 sleep 3
-echo Insira A Senha Para Iniciar
+echo Update System...
 sudo apt update
 clear
-echo Termos
-echo esse produto e open-source Com a GPL-3.0 Que Permite Uso Comercial E Distribuir e Modificar Se For Modificar Tem Que Colocar Os Direitos Do Autor Original.      Victorbillyph
-echo Aceitar
-echo 1 Sim Concordo com Os Termos
-echo 2 Nâo Concordo Sair
+echo Confirm The Installer
+echo This Installer Is a Project
+echo Command?
+echo 1 Run The Installer
+echo 2 Exit
 read teclado
 case $teclado in
 2)
- echo Saindo
- sleep 3
+ echo Exit...
+ sleep
  clear
  exit
  ;;
@@ -23,7 +23,7 @@ case $teclado in
 ;;
 esac
 clear
-echo Iniciando...
+echo Starting...
 sleep 3
 clear
 echo 1 - Tailscale
@@ -32,50 +32,50 @@ echo 3 - mtools
 echo 4 - net-tools
 echo 5 - Verificar Updates
 echo X - Sair
-echo Insira Seu Numero Para Instalar:
+echo Command:
 read teclado
 case $teclado in
 1)
-echo Instalando Tailscale
+echo Install Tailscale...
 curl -fsSL https://tailscale.com/install.sh | sh
-echo Abra O Link Abaixo No Navegador Para Configurar
+echo Executing Command For Configure The Program
 sudo tailscale up
-echo Instalaçâo Feita
+echo Install Done, Exit...
 exit
 ;;
 
 2)
-echo Instalando CasaOS
+echo Install CasaOS...
 curl -fsSL https://get.casaos.io | sudo bash
-echo Instalaçâo Feita
+echo Done, Exit...
 exit
 ;;
 
 3)
-echo Instalando M-Tools
+echo Install M-Tools...
 sudo apt install mtools
 clear
-echo instalaçâo feita
+echo done, Exit...
 exit
 ;;
 
 4)
-echo Instalando net-tools
+echo Install net-tools...
 sudo apt install net-tools
 clear
-echo instalaçâo feita
+echo done, exit...
 exit
 ;;
 
 5)
-echo Verificando Updates
+echo Update...
 sudo apt update
-echo Pronto Saindo
+echo Done, Exit...
 exit
 ;;
 
 X)
-echo Saindo
+echo exit...
 exit
 ;;
 esac
