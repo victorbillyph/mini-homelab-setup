@@ -1,14 +1,14 @@
 clear
-echo Installer
+echo Instalador
 sleep 3
-echo Update System...
+echo Altualizando Sistema...
 sudo apt update
 clear
-echo Confirm The Installer
-echo This Installer Is a Project
-echo Command?
-echo 1 Run The Installer
-echo 2 Exit
+echo Aviso Do Dono:
+echo Bem-Vindo ao Instalador Ele Esta Em Beta, Somente Tesado Em Ubuntu 20.04 e superior
+echo Comando?
+echo 1 Rodar O Instalador
+echo 2 Sair
 read teclado
 case $teclado in
 2)
@@ -19,7 +19,7 @@ case $teclado in
  ;;
 
 1)
-#Nada Pra Rodar O Comando
+#nada foi Colocado Para Continuar o Instalador
 ;;
 esac
 clear
